@@ -90,7 +90,6 @@ export default function SalesCard() {
 
               </table>
             </div>
-
           </div>
     </>
 }
