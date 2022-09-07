@@ -2,7 +2,6 @@ package lf.melo.com.entities;
 
 import java.time.LocalDate;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,13 +14,13 @@ public class Sale {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private int id;
 	
 	private String sellerName;
 	
-	private Integer visited;
+	private int visited;
 	
-	private Integer deals;
+	private int deals;
 	
 	private Double amount;
 	
@@ -33,12 +32,12 @@ public class Sale {
 	}
 
 
-	public Long getId() {
+	public int getId() {
 		return id;
 	}
 
 
-	public void setId(Long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
@@ -53,22 +52,22 @@ public class Sale {
 	}
 
 
-	public Integer getVisited() {
+	public int getVisited() {
 		return visited;
 	}
 
 
-	public void setVisited(Integer visited) {
+	public void setVisited(int visited) {
 		this.visited = visited;
 	}
 
 
-	public Integer getDeals() {
+	public int getDeals() {
 		return deals;
 	}
 
 
-	public void setDeals(Integer deals) {
+	public void setDeals(int deals) {
 		this.deals = deals;
 	}
 
@@ -91,7 +90,6 @@ public class Sale {
 	public void setDate(LocalDate date) {
 		this.date = date;
 	}
-
 
 
 }
