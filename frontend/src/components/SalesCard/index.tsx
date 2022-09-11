@@ -73,7 +73,7 @@ export default function SalesCard() {
                     <td>{sale.amount.toFixed(2)}</td>
                     <td>
                       <div className="dsmeta-red-btn-container">
-                        <NotificationButton />
+                        <NotificationButton saleId={sale.id}/>
                       </div>
                     </td>
                   </tr>
