@@ -16,11 +16,14 @@ export default function SalesCard() {
   const [sales, setSales] = useState<Sale[]>();
 
   useEffect(() => {
-    axios.get(`${BASE_URL}/sales`).then((res) => {
-      console.log(res.data.content)
+
+    const minDateFormatado = minDate.toISOString().slice(0, 10);
+    const maxDateFormatado = maxDate.toISOString().slice(0, 10);
+
+    axios.get(`${BASE_URL}/sales?minDate=${minDateFormatado}&maxDate=${maxDateFormatado}`).then((res) => {
       setSales(res.data.content);
     });
-  }, []);
+  }, [minDate, maxDate]);
 
   return (
     <>
